@@ -1,15 +1,20 @@
 package org.wecancoeit.reviews;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 @Entity
 
-public class restaurants {
+public class Restaurants {
+    @Id
+    @GeneratedValue
+    private long id;
     private String name;
     private String foodGenre;
     private String description;
 
-    public restaurants(String name, String foodGenre, String description) {
+    public Restaurants(String name, String foodGenre, String description) {
         this.name = name;
         this.foodGenre = foodGenre;
         this.description = description;

@@ -1,0 +1,86 @@
+*{
+    background-color: rgba(50, 50, 50 );
+}
+.columns{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+.box{
+  display: flex;
+  flex-direction: column;
+  width: 350;
+  height: 450px;
+  border: 1px solid black;
+  margin: 10px;
+  align-items: center;
+  text-align: justify;
+  padding: 10px;
+  border-radius: 15px;
+  background:linear-gradient(to top, red 50%, white 50%);
+  background-size: 100% 200%;
+  transition: all .8s;
+
+}
+.box:hover{
+    background-position: left bottom;
+    color: white;
+    border: none;
+    box-shadow: 0 0 20px red;
+
+}
+.box h2{
+    background-color: white;
+    color: rgb(190, 27, 27);
+    font-size: 2rem;
+}
+.box h2:hover{
+    color: white;
+}
+.box img{
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    padding: 10px;
+}
+.foodGenre{
+    text-align: left;
+    font-weight: bold;
+    font-size: xx-large;
+    color: white;
+}
+.navbar{
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+.navbar::before{
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+}
+.navbar ul li{
+    font-size: 1.1rem;
+}
+.navbar ul li a{
+    padding: 5px 20px;
+    text-decoration: none;
+    color: white;
+}
+.navbar ul li a:hover{
+    border-bottom: 2px solid yellow;
+}
+.box p{
+    background-color: none;
+}
