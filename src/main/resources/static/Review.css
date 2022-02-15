@@ -10,8 +10,10 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
+    flex-wrap: wrap;
+    
 }
 .t-heading{
     letter-spacing: 1px;
@@ -21,6 +23,8 @@ a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    
 }
 .t-heading h1{
     font-size: 2.2rem;
@@ -36,14 +40,7 @@ a{
     letter-spacing: 2px;
     text-transform: uppercase;
 }
-.container{
-    display: flex;
 
-  justify-content: center;
-    align-items:center;
-    flex-wrap: wrap;
-    width: 100%;
-}
 .box-wrapper{
   width: 400px;
   box-shadow: 2px 2px rgba(0, 0, 0, .1);
@@ -99,3 +96,63 @@ a{
 transform: translateY(-10px);
 transition: all ease 0.3s;
 }
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+.navbar::before{
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+}
+.navbar ul li{
+    font-size: 1.1rem;
+}
+.navbar ul li a{
+    padding: 5px 20px;
+    text-decoration: none;
+    color: white;
+}
+.navbar ul li a:hover{
+    border-bottom: 2px solid yellow;
+}
+
+body{
+    background-color: rgba(50, 50, 50 );
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hashtag{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+   }
+.hashtagList{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+ul{
+    gap: 15px;
+    list-style: none;
+}
+
