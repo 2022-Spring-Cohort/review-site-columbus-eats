@@ -142,6 +142,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
     
 
    }
@@ -149,10 +150,26 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
     }
 
 ul{
     gap: 15px;
     list-style: none;
 }
+.seaFoodReview{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    list-style: none;
+    color: white;
 
+}
+.reviewTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
