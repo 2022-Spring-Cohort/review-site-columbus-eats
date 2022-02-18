@@ -2,10 +2,7 @@ package org.wecancoeit.reviews.entities;
 
 import org.wecancoeit.reviews.repo.RestaurantRepo;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -19,14 +16,18 @@ public class Restaurants {
     private String foodGenre;
     private String description;
     private String url;
-    @OneToMany(mappedBy = "Restaurants")
+    @OneToMany(mappedBy = "restaurants")
     private Collection<Review> reviews;
+    @ManyToMany(mappedBy = "restaurants")
+    private Collection<Hashtag> hashtag;
 
     public Restaurants(String name, String foodGenre, String description) {
         this.name = name;
         this.foodGenre = foodGenre;
         this.description = description;
         this.reviews = new ArrayList<>();
+        this.hashtag = new ArrayList<>();
+
     }
 
     public Restaurants() {

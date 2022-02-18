@@ -19,8 +19,8 @@ public class Populator implements CommandLineRunner {
         restaurantRepo.save(restaurants2);
 
 
-        Review review1 = new Review("Arjin Harris","arjinh","best food ever",5,"/img/logo.png");
-        Review review2 = new Review("Kevin Ha","crayonEater","it was good food but not as good as the red crayon",4,"/img/logo.png");
+        Review review1 = new Review("Arjin Harris","arjinh","best food ever",5,"/img/logo.png",restaurants1);
+        Review review2 = new Review("Kevin Ha","crayonEater","it was good food but not as good as the red crayon",4,"/img/logo.png",restaurants2);
         reviewRepo.save(review2);
         reviewRepo.save(review1);
         restaurants1.addReview(review1);
