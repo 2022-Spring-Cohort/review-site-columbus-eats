@@ -1,36 +1,35 @@
 package org.wecancoeit.reviews.entities;
 
-import org.wecancoeit.reviews.repo.RestaurantRepo;
-
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Collection;
 
 @Entity
 
-public class Restaurants {
+public class Restaurant {
     @Id
     @GeneratedValue
     private long id;
     private String name;
-    private String foodGenre;
+    @ManyToOne
+    private FoodGenre foodGenre;
     private String description;
     private String url;
-    @OneToMany(mappedBy = "restaurants")
+    @OneToMany(mappedBy = "restaurant")
     private Collection<Review> reviews;
-    @ManyToMany(mappedBy = "restaurants")
-    private Collection<Hashtag> hashtag;
+    @ManyToMany
+    private Collection<Hashtag> hashtags;
 
-    public Restaurants(String name, String foodGenre, String description) {
+    public Restaurant(String name, FoodGenre foodGenre, String description) {
         this.name = name;
         this.foodGenre = foodGenre;
         this.description = description;
         this.reviews = new ArrayList<>();
-        this.hashtag = new ArrayList<>();
+        this.hashtags = new ArrayList<>();
 
     }
 
-    public Restaurants() {
+    public Restaurant() {
 
     }
 
@@ -42,7 +41,7 @@ public class Restaurants {
         return name;
     }
 
-    public String getFoodGenre() {
+    public FoodGenre getFoodGenre() {
         return foodGenre;
     }
 
@@ -58,9 +57,17 @@ public class Restaurants {
         return reviews;
     }
 
-    public void addReview(Review review){
- reviews.add(review);
-}
+    public Collection<Hashtag> getHashtags() {
+        return hashtags;
+    }
 
+    public void addReview(Review review) {
+        reviews.add(review);
+    }
+
+    public void addHashtag(Hashtag hashtag) {
+        hashtags.add(hashtag);
+
+    }
 }
 

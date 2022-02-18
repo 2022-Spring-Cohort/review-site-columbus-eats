@@ -17,22 +17,22 @@ public class Review {
     private int rating;
     private String imgPath;
     @ManyToOne
-    private Restaurants restaurants;
+    private Restaurant restaurant;
 public Review(){
 
 }
 
-    public Review(String name, String userName, String comments, int rating, String imgPath, Restaurants restaurants) {
+    public Review(String name, String userName, String comments, int rating, String imgPath, Restaurant restaurant) {
         this.name = name;
         this.userName = userName;
         this.comments = comments;
         this.rating = rating;
         this.imgPath = imgPath;
-        this.restaurants= restaurants;
+        this.restaurant = restaurant;
     }
 
-    public Restaurants getRestaurants() {
-        return restaurants;
+    public Restaurant getRestaurant() {
+        return restaurant;
     }
 
     public Long getId() {

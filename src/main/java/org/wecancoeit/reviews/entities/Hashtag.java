@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import java.util.ArrayList;
 import java.util.Collection;
 
 @Entity
@@ -16,12 +17,12 @@ public class Hashtag {
     private String details;
 
     @ManyToMany(mappedBy = "hashtags")
-    private Restaurants restaurants;
+    private Collection<Restaurant>restaurants;
 
-    public Hashtag(String name, String details,Restaurants restaurants) {
+    public Hashtag(String name, String details) {
         this.name = name;
         this.details = details;
-        this.restaurants = restaurants;
+        this.restaurants = new ArrayList<>();
     }
     public Hashtag(){
 
@@ -39,7 +40,11 @@ public class Hashtag {
         return details;
     }
 
-    public Restaurants getRestaurants() {
+    public Collection<Restaurant> getRestaurants() {
         return restaurants;
+    }
+
+    public void addRestaurant(Restaurant restaurant){
+        restaurants.add(restaurant);
     }
 }

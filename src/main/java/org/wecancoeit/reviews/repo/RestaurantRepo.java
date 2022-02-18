@@ -1,14 +1,13 @@
 package org.wecancoeit.reviews.repo;
 
 import org.springframework.data.repository.CrudRepository;
-import org.wecancoeit.reviews.entities.Restaurants;
+import org.wecancoeit.reviews.entities.Restaurant;
 
-import java.util.List;
 import java.util.Optional;
 
-public interface RestaurantRepo extends CrudRepository<Restaurants, Long> {
+public interface RestaurantRepo extends CrudRepository<Restaurant, Long> {
 
-Optional<Restaurants> findByFoodGenre(String foodGenre);
+Optional<Restaurant> findByFoodGenre(String foodGenre);
 
 
 }

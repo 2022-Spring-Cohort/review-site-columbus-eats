@@ -1,20 +1,32 @@
+package org.wecancoeit.reviews;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
-import org.wecancoeit.reviews.entities.Restaurants;
+import org.springframework.stereotype.Component;
+import org.wecancoeit.reviews.entities.FoodGenre;
+import org.wecancoeit.reviews.entities.Restaurant;
 import org.wecancoeit.reviews.entities.Review;
+import org.wecancoeit.reviews.repo.FoodGenreRepo;
 import org.wecancoeit.reviews.repo.RestaurantRepo;
 import org.wecancoeit.reviews.repo.ReviewRepo;
 
+@Component
 public class Populator implements CommandLineRunner {
 
     @Autowired
     RestaurantRepo restaurantRepo;
     @Autowired
     ReviewRepo reviewRepo;
+    @Autowired
+    FoodGenreRepo foodGenreRepo;
     @Override
     public void run(String... args) throws Exception {
-        Restaurants restaurants1 = new Restaurants("the Cajun","seafood","Taste the south with authentic low country boil style cooking");
-        Restaurants restaurants2 = new Restaurants("red lobster", "seafood","mmmmmm biscuits");
+        FoodGenre seafood= new FoodGenre("seafood","stuff from the ocean","/img/cajun.png");
+        foodGenreRepo.save(seafood);
+
+
+        Restaurant restaurants1 = new Restaurant("the Cajun",seafood,"Taste the south with authentic low country boil style cooking");
+        Restaurant restaurants2 = new Restaurant("red lobster", seafood,"mmmmmm biscuits");
         restaurantRepo.save(restaurants1);
         restaurantRepo.save(restaurants2);
 
