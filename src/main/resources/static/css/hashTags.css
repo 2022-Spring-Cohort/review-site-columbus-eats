@@ -41,13 +41,11 @@
 }
 .sweet{
     color: white;
-    
-    
+    align-content: space-around;
 }
-.spicy{
-    color: white;
+
     
-}
+
 .africa{
     color: white;
     
@@ -57,6 +55,10 @@
     
 }
 
-.btn-text-left{
-	text-align: left;	
+.hashtags{
+    color: white;
+    text-align: left;
+    font-weight: bold;
+    font-size: xx-large;
+    padd
 }
