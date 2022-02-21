@@ -37,6 +37,24 @@ public class Populator implements CommandLineRunner {
         restaurantRepo.save(restaurants6);
 
 
+        FoodGenre Asian= new FoodGenre("Asian","asian stuff","/img/");
+        foodGenreRepo.save(Asian);
+
+
+        Restaurant restaurants3 = new Restaurant("Lan Viet",Asian,"Filler Filler Filler");
+        Restaurant restaurants4 = new Restaurant("Gogi Korean BBQ", Asian,"Filler Filler Filler");
+        restaurantRepo.save(restaurants3);
+        restaurantRepo.save(restaurants4);
+
+        FoodGenre Mexican= new FoodGenre("Mexican","mexican stuff","/img/");
+        foodGenreRepo.save(Mexican);
+
+
+        Restaurant restaurants5 = new Restaurant("Local Cantina",Mexican,"Filler Filler Filler");
+        Restaurant restaurants6 = new Restaurant("El Vaquero", Mexican,"Filler Filler Filler");
+        restaurantRepo.save(restaurants3);
+        restaurantRepo.save(restaurants4);
+
 
         Review review1 = new Review("Arjin Harris","arjinh","best food ever",5,"/img/logo.png",restaurants1);
         Review review2 = new Review("Kevin Ha","crayonEater","it was good food but not as good as the red crayon",4,"/img/logo.png",restaurants2);
