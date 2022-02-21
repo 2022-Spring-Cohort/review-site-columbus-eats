@@ -26,34 +26,33 @@ public class Populator implements CommandLineRunner {
         FoodGenre Africanfood= new FoodGenre("Africanfood","stuff from back home","/img/AfricanLogo.png");
         foodGenreRepo.save(Africanfood);
 
-        Restaurant restaurants1 = new Restaurant("the Cajun",seafood,"Taste the south with authentic low country boil style cooking");
-        Restaurant restaurants2 = new Restaurant("red lobster", seafood,"mmmmmm biscuits");
-        Restaurant restaurants5 = new Restaurant("Lalibela",Africanfood,"Lamb");
-        Restaurant restaurants6 = new Restaurant("HabeshaGarden",Africanfood,"goatmeat");
-
-        restaurantRepo.save(restaurants1);
-        restaurantRepo.save(restaurants2);
-        restaurantRepo.save(restaurants5);
-        restaurantRepo.save(restaurants6);
-
-
         FoodGenre Asian= new FoodGenre("Asian","asian stuff","/img/");
         foodGenreRepo.save(Asian);
-
-
-        Restaurant restaurants3 = new Restaurant("Lan Viet",Asian,"Filler Filler Filler");
-        Restaurant restaurants4 = new Restaurant("Gogi Korean BBQ", Asian,"Filler Filler Filler");
-        restaurantRepo.save(restaurants3);
-        restaurantRepo.save(restaurants4);
-
         FoodGenre Mexican= new FoodGenre("Mexican","mexican stuff","/img/");
         foodGenreRepo.save(Mexican);
 
+        Restaurant restaurants1 = new Restaurant("the Cajun",seafood,"Taste the south with authentic low country boil style cooking");
+        Restaurant restaurants2 = new Restaurant("red lobster", seafood,"mmmmmm biscuits");
+        Restaurant restaurants3 = new Restaurant("Lalibela",Africanfood,"Lamb");
+        Restaurant restaurants4 = new Restaurant("HabeshaGarden",Africanfood,"goatmeat");
+        Restaurant restaurants5 = new Restaurant("Lan Viet",Asian,"Filler Filler Filler");
+        Restaurant restaurants6 = new Restaurant("Gogi Korean BBQ", Asian,"Filler Filler Filler");
+        Restaurant restaurants7 = new Restaurant("Local Cantina",Mexican,"Filler Filler Filler");
+        Restaurant restaurants8 = new Restaurant("El Vaquero", Mexican,"Filler Filler Filler");
 
-        Restaurant restaurants5 = new Restaurant("Local Cantina",Mexican,"Filler Filler Filler");
-        Restaurant restaurants6 = new Restaurant("El Vaquero", Mexican,"Filler Filler Filler");
+        restaurantRepo.save(restaurants1);
+        restaurantRepo.save(restaurants2);
         restaurantRepo.save(restaurants3);
         restaurantRepo.save(restaurants4);
+        restaurantRepo.save(restaurants5);
+        restaurantRepo.save(restaurants6);
+        restaurantRepo.save(restaurants7);
+        restaurantRepo.save(restaurants8);
+
+
+
+
+
 
 
         Review review1 = new Review("Arjin Harris","arjinh","best food ever",5,"/img/logo.png",restaurants1);
