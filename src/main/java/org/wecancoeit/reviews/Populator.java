@@ -4,9 +4,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import org.wecancoeit.reviews.entities.FoodGenre;
+import org.wecancoeit.reviews.entities.Hashtag;
 import org.wecancoeit.reviews.entities.Restaurant;
 import org.wecancoeit.reviews.entities.Review;
 import org.wecancoeit.reviews.repo.FoodGenreRepo;
+import org.wecancoeit.reviews.repo.HashtagRepo;
 import org.wecancoeit.reviews.repo.RestaurantRepo;
 import org.wecancoeit.reviews.repo.ReviewRepo;
 
@@ -19,6 +21,8 @@ public class Populator implements CommandLineRunner {
     ReviewRepo reviewRepo;
     @Autowired
     FoodGenreRepo foodGenreRepo;
+    @Autowired
+    HashtagRepo hashtagRepo;
 
     @Override
     public void run(String... args) throws Exception {
@@ -31,7 +35,7 @@ public class Populator implements CommandLineRunner {
         foodGenreRepo.save(Asian);
         FoodGenre Mexican = new FoodGenre("Mexican", "mexican stuff", "/img/");
         foodGenreRepo.save(Mexican);
-<<<<<<<HEAD
+
 
         Restaurant restaurants1 = new Restaurant("the Cajun", seafood, "Taste the south with authentic low country boil style cooking", "url.com");
         Restaurant restaurants2 = new Restaurant("red lobster", seafood, "mmmmmm biscuits", "url.com");
@@ -60,26 +64,22 @@ public class Populator implements CommandLineRunner {
         restaurants2.addReview(review1);
         restaurants2.addReview(review2);
 
+        Hashtag hashtag1 = new Hashtag("Spicy","burns the tounge");
+        Hashtag hashtag2 = new Hashtag("Dine-in","inside seating available");
+        Hashtag hashtag = new Hashtag("Sweets","dessert available");
+        Hashtag hashtag3 = new Hashtag("kidMenu","stuff for the little ones");
+        Hashtag hashtag4 = new Hashtag("Bar","get your drink on");
+        Hashtag hashtag5 = new Hashtag("Ethnic","good minority eats");
+        hashtagRepo.save(hashtag);
+        hashtagRepo.save(hashtag1);
+        hashtagRepo.save(hashtag2);
+        hashtagRepo.save(hashtag3);
+        hashtagRepo.save(hashtag4);
+        hashtagRepo.save(hashtag5);
+
+
+
 
     }
 }
-
-
-
-
-
-=======
-
-
->>>>>>> 7266660f5ad40888d63b90202deb849e3825ba53
-
-<<<<<<< HEAD
-=======
-
-
-
-
-
->>>>>>> 7266660f5ad40888d63b90202deb849e3825ba53
-
 

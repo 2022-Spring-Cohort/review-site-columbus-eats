@@ -79,7 +79,8 @@
 <section id="testimonials">
 
 
-    <div class="container">
+    <div class="container" th:each = "myReview: ${review}">
+        <!-- ask about how to restrict it by resturant -->
 
         <div class="box-wrapper">
 
@@ -90,10 +91,11 @@
                         <img src="/images/profile_100x100.jpg" alt="">
                     </div>
                     <div class="user">
-                        <strong>Arjin Harris</strong>
-                        <span>@arjinh</span>
+                        <strong th:text = "${myReview.name}">Arjin Harris</strong>
+                        <span th:text = "${myReview.userName}">@arjinh</span>
                     </div>
                 </div>
+                <!-- ask about how to replicate stars from form input -->
                 <div class="review">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -105,7 +107,7 @@
             </div>
 
             <div class="comments">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita in recusandae modi atque aliquid explicabo
+                <p th:text = "${myReview.comments}">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita in recusandae modi atque aliquid explicabo
                     incidunt provident ipsa! Laudantium, mollitia! Nemo, fugiat impedit fuga pariatur rem aliquid esse! Tenetur, itaque.</p>
             </div>
         </div>
