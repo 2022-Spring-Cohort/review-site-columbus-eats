@@ -23,12 +23,31 @@ public class Populator implements CommandLineRunner {
     public void run(String... args) throws Exception {
         FoodGenre seafood= new FoodGenre("seafood","stuff from the ocean","/img/cajun.png");
         foodGenreRepo.save(seafood);
+        FoodGenre Africanfood= new FoodGenre("Africanfood","stuff from back home","/img/AfricanLogo.png");
+        foodGenreRepo.save(Africanfood);
 
+        FoodGenre Asian= new FoodGenre("Asian","asian stuff","/img/");
+        foodGenreRepo.save(Asian);
+        FoodGenre Mexican= new FoodGenre("Mexican","mexican stuff","/img/");
+        foodGenreRepo.save(Mexican);
 
-        Restaurant restaurants1 = new Restaurant("the Cajun",seafood,"Taste the south with authentic low country boil style cooking");
-        Restaurant restaurants2 = new Restaurant("red lobster", seafood,"mmmmmm biscuits");
+        Restaurant restaurants1 = new Restaurant("the Cajun",seafood,"Taste the south with authentic low country boil style cooking","url.com");
+        Restaurant restaurants2 = new Restaurant("red lobster", seafood,"mmmmmm biscuits","url.com");
+        Restaurant restaurants3 = new Restaurant("Lalibela",Africanfood,"Lamb", "url.com");
+        Restaurant restaurants4 = new Restaurant("HabeshaGarden",Africanfood,"goatmeat","url.com");
+        Restaurant restaurants5 = new Restaurant("Lan Viet",Asian,"Filler Filler Filler","url.com");
+        Restaurant restaurants6 = new Restaurant("Gogi Korean BBQ", Asian,"Filler Filler Filler","url.com");
+        Restaurant restaurants7 = new Restaurant("Local Cantina",Mexican,"Filler Filler Filler","url.com");
+        Restaurant restaurants8 = new Restaurant("El Vaquero", Mexican,"Filler Filler Filler","url.com");
+
         restaurantRepo.save(restaurants1);
         restaurantRepo.save(restaurants2);
+        restaurantRepo.save(restaurants3);
+        restaurantRepo.save(restaurants4);
+        restaurantRepo.save(restaurants5);
+        restaurantRepo.save(restaurants6);
+        restaurantRepo.save(restaurants7);
+        restaurantRepo.save(restaurants8);
 
 
         Review review1 = new Review("Arjin Harris","arjinh","best food ever",5,"/img/logo.png",restaurants1);

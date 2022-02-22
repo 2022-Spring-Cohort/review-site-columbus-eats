@@ -20,8 +20,12 @@ public class RestaurantController {
     @RequestMapping("/")
     public String showRestaurantTemplate (Model model){
         model.addAttribute("genres",foodGenreRepo.findAll());
-        return "FoodGenreTemplate";
+        return "home";
     }
 
-
+@RequestMapping("/foodGenre")
+    public String showFoodGenreTemplate(Model model){
+        model.addAttribute("genres",foodGenreRepo.findAll());
+        return "FoodGenreTemplate";
+}
 }

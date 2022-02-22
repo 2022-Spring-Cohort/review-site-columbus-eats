@@ -20,13 +20,16 @@ public class Restaurant {
     @ManyToMany
     private Collection<Hashtag> hashtags;
 
-    public Restaurant(String name, FoodGenre foodGenre, String description) {
+
+    public Restaurant(String name, FoodGenre foodGenre, String description, String url) {
         this.name = name;
         this.foodGenre = foodGenre;
         this.description = description;
+        this.url = url;
+        this.reviews = reviews;
+        this.hashtags = hashtags;
         this.reviews = new ArrayList<>();
         this.hashtags = new ArrayList<>();
-
     }
 
     public Restaurant() {
