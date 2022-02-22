@@ -54,9 +54,9 @@ public class Populator implements CommandLineRunner {
         Restaurant restaurants3 = new Restaurant("Lalibela", Africanfood, "Lamb", "url.com","imgLing",hashtag4);
         Restaurant restaurants4 = new Restaurant("HabeshaGarden", Africanfood, "goatmeat", "url.com","imgLing",hashtag3);
         Restaurant restaurants5 = new Restaurant("Lan Viet", Asian, "Filler Filler Filler", "https://lanvietmarket.com/","img/lanviet.jpg/",hashtag4);
-        Restaurant restaurants6 = new Restaurant("Gogi Korean BBQ", Asian, "Filler Filler Filler", "url.com","imgLing",hashtag,hashtag1,hashtag3);
-        Restaurant restaurants7 = new Restaurant("Local Cantina", Mexican, "Filler Filler Filler", "url.com","imgLing",hashtag1);
-        Restaurant restaurants8 = new Restaurant("El Vaquero", Mexican, "Filler Filler Filler", "url.com","imgLing",hashtag5);
+        Restaurant restaurants6 = new Restaurant("Gogi Korean BBQ", Asian, "Filler Filler Filler", "https://gogikbbq.com/","img/Gogi.png/",hashtag,hashtag1,hashtag3);
+        Restaurant restaurants7 = new Restaurant("Local Cantina", Mexican, "Filler Filler Filler", "https://localcantina.com/","img/local-cantina-logo.png/",hashtag1);
+        Restaurant restaurants8 = new Restaurant("El Vaquero", Mexican, "Filler Filler Filler", "https://www.mexicanrestauranthilliard.com/","img/elVaquero/",hashtag5);
 
         restaurantRepo.save(restaurants1);
         restaurantRepo.save(restaurants2);
