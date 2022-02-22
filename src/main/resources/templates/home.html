@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Columbus Eats Reviews</title>
-    <link rel="stylesheet" href="/static/css/home.css">
+    <link rel="stylesheet" href="/css/home.css">
 </head>
 <body>
     <nav class="navbar">
@@ -51,12 +51,12 @@
                     </div>
                     <ul class="hashtagList">
                         <!-- use thyme leaf to generate hastags -->
-                        <li th:each = "myHastag: ${Hashtags}"> #Spicy 
+                        <li th:each = "hashtag: ${Hashtags}"> #Spicy
                             <!-- fix a syntax -->
-                            <a  th:href = "${hashtag link}">
+                            <a  th:href = "'/hashtags/'+${hashtag.id}">
                                 
-                                    <h3 th:text = "${myHashtag.name}"></h3>
-                                    <p th:text = "${myHashtag.desc">Filler text blah blah blah</p>    
+                                    <h3 th:text = "${hashtag.name}"></h3>
+                                    <p th:text = "${hashtag.details}">Filler text blah blah blah</p>
                             </a>
                         </li>
                         

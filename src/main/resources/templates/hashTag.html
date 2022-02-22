@@ -10,18 +10,16 @@
     
 
         <ul>
-            <li><a href="/templates/home.html">Home</a></li>
+            <li><a href="/home.html">Home</a></li>
     
-            <li><a href="/templates/home.html#genre">Food Genre</a></li>
+            <li><a href="/home.html#genre">Food Genre</a></li>
         </ul>
     </nav>
     <section>
         <h1 class="heading">Spicy</h1>
         <ul>
-            <li>restaurant 1</li>
-            <li>restaurant 2</li>
-            <li>restaurant 3</li>
-            <li>restaurant 4</li>
+            <li th:each="restaurant:${hashtag.restaurants }" th:text="${restaurant.name}">restaurant 1</li>
+
         </ul>
     </section>
 </body>

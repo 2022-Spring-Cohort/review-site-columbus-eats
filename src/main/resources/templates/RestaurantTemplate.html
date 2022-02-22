@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"> </script>
 
-    <link rel="stylesheet" href="/static/css/restaurant.css">
+    <link rel="stylesheet" href="/css/restaurant.css">
     <title>Document</title>
 </head>
 <body>
@@ -32,7 +32,7 @@
         <div class="menu">
 
             <div class="symb">
-                <a href="https://cajunboilbar.com"target= "_blank"><img class="logo" src="img/cajun.png"></a>
+                <a th:href="${restaurant.url}"target= "_blank"><img class="logo" th:src="${restaurant.img}"></a>
             </div>
         </div>
 
@@ -44,7 +44,7 @@
         <H1>Hashtags</H1>
         </div>
         <ul class="hashtagList">
-            <li> #Spicy </li>
+            <li th:each="restaurant:${restaurant.hashtags}"> #Spicy </li>
             <li> #sweets </li>
             <li> #dine-in </li>
             <li> #Spicy </li>
@@ -60,18 +60,19 @@
         </div>
 
 <!-- TODO: Write this method :)-->
-<form action="/review" method="post">
+<form th:action="'/restaurants/'+${restaurant.id}" method="post">
   <div class="reviewTitle">
     <h2>Reviews</h2>
   </div>
-  <div class="seaFoodReview">
+  <div class="foodReview">
 
     <label for="starRating">Star Rating:</label><br>
-  <input type="text" id="starRating" name="starRating" value=""><br>
+  <input type="number" min ="0" max="5" id="starRating" name="starRating" value=""><br>
   <label for="review">Review:</label><br>
+      <input type="text" id="userName" name="userName" value=""><br>
+      <label for="userName">Name:</label><br>
   <input type="text" id="review" name="review" value="">
-  <label for="hashTag">Add a Hashtag:</label><br>
-  <input type="text" id="hashTag" name="hashTag" value="">
+
     <button type="submit"> Submit a review</button>
 </div>
 </form>
@@ -79,8 +80,8 @@
 <section id="testimonials">
 
 
-    <div class="container" th:each = "myReview: ${review}">
-        <!-- ask about how to restrict it by resturant -->
+    <div class="container" th:each = "myReview: ${restaurant.reviews}">
+        <!-- ask about how to restrict it by restaurant -->
 
         <div class="box-wrapper">
 
@@ -88,20 +89,16 @@
 
                 <div class="profile">
                     <div class="profile-img">
-                        <img src="/images/profile_100x100.jpg" alt="">
+                        <img src="/img/profilePic.jpg" alt="">
                     </div>
                     <div class="user">
                         <strong th:text = "${myReview.name}">Arjin Harris</strong>
                         <span th:text = "${myReview.userName}">@arjinh</span>
                     </div>
                 </div>
-                <!-- ask about how to replicate stars from form input -->
-                <div class="review">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i> <!--empty star---->
+                <div class="review" >
+
+                    <i th:each="count : ${#numbers.sequence(0, 4)}" th:class="${count < myReview.rating} ?'fas fa-star':'far fa-star'"></i>
 
                 </div>
             </div>
@@ -113,133 +110,7 @@
         </div>
     </div>
 
-    <div class="container">
 
-        <div class="box-wrapper">
-
-            <div class="box-top">
-
-                <div class="profile">
-                    <div class="profile-img">
-                        <img src="/images/profile_100x100.jpg" alt="">
-                    </div>
-                    <div class="user">
-                        <strong>Arjin Harris</strong>
-                        <span>@arjinh</span>
-                    </div>
-                </div>
-                <div class="review">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i> <!--empty star---->
-
-                </div>
-            </div>
-
-            <div class="comments">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita in recusandae modi atque aliquid explicabo
-                    incidunt provident ipsa! Laudantium, mollitia! Nemo, fugiat impedit fuga pariatur rem aliquid esse! Tenetur, itaque.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-
-        <div class="box-wrapper">
-
-            <div class="box-top">
-
-                <div class="profile">
-                    <div class="profile-img">
-                        <img src="/images/profile_100x100.jpg" alt="">
-                    </div>
-                    <div class="user">
-                        <strong>Arjin Harris</strong>
-                        <span>@arjinh</span>
-                    </div>
-                </div>
-                <div class="review">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i> <!--empty star---->
-
-                </div>
-            </div>
-
-            <div class="comments">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita in recusandae modi atque aliquid explicabo
-                    incidunt provident ipsa! Laudantium, mollitia! Nemo, fugiat impedit fuga pariatur rem aliquid esse! Tenetur, itaque.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-
-        <div class="box-wrapper">
-
-            <div class="box-top">
-
-                <div class="profile">
-                    <div class="profile-img">
-                        <img src="/images/profile_100x100.jpg" alt="">
-                    </div>
-                    <div class="user">
-                        <strong>Arjin Harris</strong>
-                        <span>@arjinh</span>
-                    </div>
-                </div>
-                <div class="review">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i> <!--empty star---->
-
-                </div>
-            </div>
-
-            <div class="comments">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita in recusandae modi atque aliquid explicabo
-                    incidunt provident ipsa! Laudantium, mollitia! Nemo, fugiat impedit fuga pariatur rem aliquid esse! Tenetur, itaque.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-
-        <div class="box-wrapper">
-
-            <div class="box-top">
-
-                <div class="profile">
-                    <div class="profile-img">
-                        <img src="/images/profile_100x100.jpg" alt="">
-                    </div>
-                    <div class="user">
-                        <strong>Arjin Harris</strong>
-                        <span>@arjinh</span>
-                    </div>
-                </div>
-                <div class="review">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i> <!--empty star---->
-
-                </div>
-            </div>
-
-            <div class="comments">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita in recusandae modi atque aliquid explicabo
-                    incidunt provident ipsa! Laudantium, mollitia! Nemo, fugiat impedit fuga pariatur rem aliquid esse! Tenetur, itaque.</p>
-            </div>
-        </div>
-    </div>
 
 
 </section>

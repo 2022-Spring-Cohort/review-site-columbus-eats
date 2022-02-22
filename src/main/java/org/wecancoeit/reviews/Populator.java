@@ -36,15 +36,27 @@ public class Populator implements CommandLineRunner {
         FoodGenre Mexican = new FoodGenre("Mexican", "mexican stuff", "/img/");
         foodGenreRepo.save(Mexican);
 
+        Hashtag hashtag1 = new Hashtag("Spicy","burns the tounge");
+        Hashtag hashtag2 = new Hashtag("Dine-in","inside seating available");
+        Hashtag hashtag = new Hashtag("Sweets","dessert available");
+        Hashtag hashtag3 = new Hashtag("kidMenu","stuff for the little ones");
+        Hashtag hashtag4 = new Hashtag("Bar","get your drink on");
+        Hashtag hashtag5 = new Hashtag("Ethnic","good minority eats");
+        hashtagRepo.save(hashtag);
+        hashtagRepo.save(hashtag1);
+        hashtagRepo.save(hashtag2);
+        hashtagRepo.save(hashtag3);
+        hashtagRepo.save(hashtag4);
+        hashtagRepo.save(hashtag5);
 
-        Restaurant restaurants1 = new Restaurant("the Cajun", seafood, "Taste the south with authentic low country boil style cooking", "url.com");
-        Restaurant restaurants2 = new Restaurant("red lobster", seafood, "mmmmmm biscuits", "url.com");
-        Restaurant restaurants3 = new Restaurant("Lalibela", Africanfood, "Lamb", "url.com");
-        Restaurant restaurants4 = new Restaurant("HabeshaGarden", Africanfood, "goatmeat", "url.com");
-        Restaurant restaurants5 = new Restaurant("Lan Viet", Asian, "Filler Filler Filler", "url.com");
-        Restaurant restaurants6 = new Restaurant("Gogi Korean BBQ", Asian, "Filler Filler Filler", "url.com");
-        Restaurant restaurants7 = new Restaurant("Local Cantina", Mexican, "Filler Filler Filler", "url.com");
-        Restaurant restaurants8 = new Restaurant("El Vaquero", Mexican, "Filler Filler Filler", "url.com");
+        Restaurant restaurants1 = new Restaurant("the Cajun", seafood, "Taste the south with authentic low country boil style cooking", "url.com","imgLing", hashtag);
+        Restaurant restaurants2 = new Restaurant("red lobster", seafood, "mmmmmm biscuits", "url.com","imgLing", hashtag1);
+        Restaurant restaurants3 = new Restaurant("Lalibela", Africanfood, "Lamb", "url.com","imgLing",hashtag4);
+        Restaurant restaurants4 = new Restaurant("HabeshaGarden", Africanfood, "goatmeat", "url.com","imgLing",hashtag3);
+        Restaurant restaurants5 = new Restaurant("Lan Viet", Asian, "Filler Filler Filler", "url.com","imgLing",hashtag4);
+        Restaurant restaurants6 = new Restaurant("Gogi Korean BBQ", Asian, "Filler Filler Filler", "url.com","imgLing",hashtag,hashtag1,hashtag3);
+        Restaurant restaurants7 = new Restaurant("Local Cantina", Mexican, "Filler Filler Filler", "url.com","imgLing",hashtag1);
+        Restaurant restaurants8 = new Restaurant("El Vaquero", Mexican, "Filler Filler Filler", "url.com","imgLing",hashtag5);
 
         restaurantRepo.save(restaurants1);
         restaurantRepo.save(restaurants2);
@@ -64,18 +76,7 @@ public class Populator implements CommandLineRunner {
         restaurants2.addReview(review1);
         restaurants2.addReview(review2);
 
-        Hashtag hashtag1 = new Hashtag("Spicy","burns the tounge");
-        Hashtag hashtag2 = new Hashtag("Dine-in","inside seating available");
-        Hashtag hashtag = new Hashtag("Sweets","dessert available");
-        Hashtag hashtag3 = new Hashtag("kidMenu","stuff for the little ones");
-        Hashtag hashtag4 = new Hashtag("Bar","get your drink on");
-        Hashtag hashtag5 = new Hashtag("Ethnic","good minority eats");
-        hashtagRepo.save(hashtag);
-        hashtagRepo.save(hashtag1);
-        hashtagRepo.save(hashtag2);
-        hashtagRepo.save(hashtag3);
-        hashtagRepo.save(hashtag4);
-        hashtagRepo.save(hashtag5);
+
 
 
 

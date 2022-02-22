@@ -53,7 +53,7 @@ html{
     position: absolute;
     top: 0;
     left: 0;
-    background: url(/static/img/logo.png) no-repeat center center/cover;
+    background: url(/img/logo.png) no-repeat center center/cover;
     height: 1450px;
     width: 100%;
     z-index: -1;
