@@ -29,36 +29,11 @@
 .navbar ul li a:hover{
     border-bottom: 2px solid yellow;
 }
-*{
-    background-color: rgba(50, 50, 50 );
-}
+
 .columns{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     box-sizing: border-box;
     padding-left: 20px;
-}
-.sweet{
-    color: white;
-    align-content: space-around;
-}
-
-    
-
-.africa{
-    color: white;
-    
-}
-.mexican{
-    color: white;
-    
-}
-
-.hashtags{
-    color: white;
-    text-align: left;
-    font-weight: bold;
-    font-size: xx-large;
-    padd
 }

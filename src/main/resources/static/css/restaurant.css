@@ -164,16 +164,6 @@ ul{
     gap: 15px;
     list-style: none;
     color: white;
-<<<<<<< HEAD
-=======
-}
-.reviewTitle{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
->>>>>>> 9c25febe070c2a267c78c8812a5202cc27050d4f
 
 }
 .reviewTitle{

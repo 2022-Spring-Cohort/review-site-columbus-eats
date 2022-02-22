@@ -2,6 +2,7 @@ package org.wecancoeit.reviews.entities;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 
 @Entity
@@ -15,18 +16,21 @@ public class Restaurant {
     private FoodGenre foodGenre;
     private String description;
     private String url;
+    private String img;
     @OneToMany(mappedBy = "restaurant")
     private Collection<Review> reviews;
     @ManyToMany
     private Collection<Hashtag> hashtags;
 
-    public Restaurant(String name, FoodGenre foodGenre, String description) {
+
+    public Restaurant(String name, FoodGenre foodGenre, String description, String url,String img,Hashtag...hashtags) {
         this.name = name;
         this.foodGenre = foodGenre;
         this.description = description;
+        this.url = url;
+        this.img = img;
         this.reviews = new ArrayList<>();
-        this.hashtags = new ArrayList<>();
-
+        this.hashtags = Arrays.asList(hashtags);
     }
 
     public Restaurant() {
@@ -39,6 +43,10 @@ public class Restaurant {
 
     public String getName() {
         return name;
+    }
+
+    public String getImg() {
+        return img;
     }
 
     public FoodGenre getFoodGenre() {
