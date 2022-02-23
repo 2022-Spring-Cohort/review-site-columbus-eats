@@ -31,9 +31,9 @@ public class Populator implements CommandLineRunner {
         FoodGenre Africanfood = new FoodGenre("Africanfood", "stuff from back home", "/img/AfricanLogo.png");
         foodGenreRepo.save(Africanfood);
 
-        FoodGenre Asian = new FoodGenre("Asian", "asian stuff", "/img/");
+        FoodGenre Asian = new FoodGenre("Asian", "asian stuff", "/img/asianGenre.jpg");
         foodGenreRepo.save(Asian);
-        FoodGenre Mexican = new FoodGenre("Mexican", "mexican stuff", "/img/");
+        FoodGenre Mexican = new FoodGenre("Mexican", "mexican stuff", "/img/mexGenre.png");
         foodGenreRepo.save(Mexican);
 
         Hashtag hashtag1 = new Hashtag("Spicy","burns the tounge");
