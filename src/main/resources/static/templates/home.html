@@ -40,7 +40,7 @@
         <div class="columns">
             <section th:each="myGenre:${genres}" class="box">
                 <h2 th:text="${myGenre.genre}">Seafood</h2>
-                <a th:href="'/genre/'+${myGenre.id}"><img class="genreImage" th:src="${myGenre.imgUrl}"></a>
+                <a href=""><img class="genreImage" th:src="${myGenre.imgUrl}"></a>
                 <p th:text="${myGenre.desc}">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet quo rem architecto, quibusdam nulla vel minima aut veritatis fuga dicta?</p>
             </section>
             </div>
@@ -51,7 +51,7 @@
                     </div>
                     <ul class="hashtagList">
                         <!-- use thyme leaf to generate hastags -->
-                        <li th:each = "hashtag: ${Hashtags}">
+                        <li th:each = "hashtag: ${Hashtags}"> #Spicy
                             <!-- fix a syntax -->
                             <a  th:href = "'/hashtags/'+${hashtag.id}" class = "hashtagPop">
                                 

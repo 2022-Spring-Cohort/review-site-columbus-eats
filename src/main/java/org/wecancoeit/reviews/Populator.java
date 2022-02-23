@@ -26,14 +26,14 @@ public class Populator implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        FoodGenre seafood = new FoodGenre("seafood", "stuff from the ocean", "/img/cajun.png");
+        FoodGenre seafood = new FoodGenre("seafood", "Seafood is any form of sea life regarded as food by humans, prominently including fish and shellfish. Shellfish include various species of molluscs, crustaceans, and echinoderms.", "/img/newSeaLogoGenre.jpg");
         foodGenreRepo.save(seafood);
-        FoodGenre Africanfood = new FoodGenre("Africanfood", "stuff from back home", "/img/AfricanLogo.png");
+        FoodGenre Africanfood = new FoodGenre("African", " The various cuisines of Africa use a combination of locally available fruits, cereal grains and vegetables, as well as milk and meat products.", "/img/AfricanLogo.png");
         foodGenreRepo.save(Africanfood);
 
-        FoodGenre Asian = new FoodGenre("Asian", "asian stuff", "/img/");
+        FoodGenre Asian = new FoodGenre("Asian", "Cuisines can be categorized into several major regional families, including East Asian, Southeast Asian, South Asian, Central Asian, and Middle Eastern cuisines.", "/img/asianGenre.jpg");
         foodGenreRepo.save(Asian);
-        FoodGenre Mexican = new FoodGenre("Mexican", "mexican stuff", "/img/");
+        FoodGenre Mexican = new FoodGenre("Mexican", "Cuisines consists of the cooking cuisines and traditions of the modern country of Mexico.", "/img/mexGenre.png");
         foodGenreRepo.save(Mexican);
 
         Hashtag hashtag1 = new Hashtag("Spicy","burns the tounge");
@@ -51,8 +51,8 @@ public class Populator implements CommandLineRunner {
 
         Restaurant restaurants1 = new Restaurant("the Cajun", seafood, "Taste the south with authentic low country boil style cooking", "url.com","imgLing", hashtag);
         Restaurant restaurants2 = new Restaurant("red lobster", seafood, "mmmmmm biscuits", "url.com","imgLing", hashtag1);
-        Restaurant restaurants3 = new Restaurant("Lalibela", Africanfood, "Lamb", "url.com","imgLing",hashtag4);
-        Restaurant restaurants4 = new Restaurant("HabeshaGarden", Africanfood, "goatmeat", "url.com","imgLing",hashtag3);
+        Restaurant restaurants3 = new Restaurant("Lalibela Ethiopian Restaurant", Africanfood, "Lamb", "https://lalibelarestaurant.net/","img/Lalibela.png/",hashtag4);
+        Restaurant restaurants4 = new Restaurant("Hoyo's Kitchen", Africanfood, "goatmeat", "http://hoyoskitchen.com/","img/Somali Restaurant.jpg",hashtag3);
         Restaurant restaurants5 = new Restaurant("Lan Viet", Asian, "Filler Filler Filler", "https://lanvietmarket.com/","img/lanviet.jpg/",hashtag4);
         Restaurant restaurants6 = new Restaurant("Gogi Korean BBQ", Asian, "Filler Filler Filler", "https://gogikbbq.com/","img/Gogi.png/",hashtag,hashtag1,hashtag3);
         Restaurant restaurants7 = new Restaurant("Local Cantina", Mexican, "Filler Filler Filler", "https://localcantina.com/","img/local-cantina-logo.png/",hashtag1);
