@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Columbus Eats Reviews</title>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <nav class="navbar">
+    
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#genre">Food Genre</a></li>
+            <li><a href="#hashtags">HashTags</a></li>
+    
+    
+        </ul>
+    </nav>
+    <div class="Body">
+
+    </div>
+    
+    <section id="home">
+
+        <h1 class="heading">Columbus Eats</h1>
+
+        <div class="talk-bubble">
+            <div class="talktext">
+              <p>Welcome to Columbus's number one review site. See what others are saying about the hottest restuarnts in town and leave your own thoughts as well</p>
+            
+            </div>
+
+          
+
+
+    </section>
+    <section id="genre">
+        <h1 class="foodGenre">Food Genres</h1>
+        <div class="columns">
+            <section th:each="myGenre:${genres}" class="box">
+                <h2 th:text="${myGenre.genre}">Seafood</h2>
+                <a href=""><img class="genreImage" th:src="${myGenre.imgUrl}"></a>
+                <p th:text="${myGenre.desc}">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet quo rem architecto, quibusdam nulla vel minima aut veritatis fuga dicta?</p>
+            </section>
+            </div>
+            </section>
+            <section id="hashtags">
+                <div class="hashtag">
+                    <H1>Hashtags</H1>
+                    </div>
+                    <ul class="hashtagList">
+                        <!-- use thyme leaf to generate hastags -->
+                        <li th:each = "hashtag: ${Hashtags}"> #Spicy
+                            <!-- fix a syntax -->
+                            <a  th:href = "'/hashtags/'+${hashtag.id}" class = "hashtagPop">
+                                
+                                    <h3 th:text = "${hashtag.name}"></h3>
+                                    <p th:text = "${hashtag.details}">Filler text blah blah blah</p>
+                            </a>
+                        </li>
+                        
+                    </ul>
+            </section>
+            <footer class="footer">
+               
+                <p>Thanks for checking out Columbus Eats!</p>
+                
+                  
+                </div>
+              </footer>
+</body>
+</html>
