@@ -26,14 +26,14 @@ public class Populator implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        FoodGenre seafood = new FoodGenre("seafood", "stuff from the ocean", "/img/cajun.png");
+        FoodGenre seafood = new FoodGenre("seafood", "Seafood is any form of sea life regarded as food by humans, prominently including fish and shellfish. Shellfish include various species of molluscs, crustaceans, and echinoderms.", "/img/newSeaLogoGenre.jpg");
         foodGenreRepo.save(seafood);
-        FoodGenre Africanfood = new FoodGenre("Africanfood", "stuff from back home", "/img/AfricanLogo.png");
+        FoodGenre Africanfood = new FoodGenre("African", " The various cuisines of Africa use a combination of locally available fruits, cereal grains and vegetables, as well as milk and meat products.", "/img/AfricanLogo.png");
         foodGenreRepo.save(Africanfood);
 
-        FoodGenre Asian = new FoodGenre("Asian", "asian stuff", "/img/asianGenre.jpg");
+        FoodGenre Asian = new FoodGenre("Asian", "Cuisines can be categorized into several major regional families, including East Asian, Southeast Asian, South Asian, Central Asian, and Middle Eastern cuisines.", "/img/asianGenre.jpg");
         foodGenreRepo.save(Asian);
-        FoodGenre Mexican = new FoodGenre("Mexican", "mexican stuff", "/img/mexGenre.png");
+        FoodGenre Mexican = new FoodGenre("Mexican", "Cuisines consists of the cooking cuisines and traditions of the modern country of Mexico.", "/img/mexGenre.png");
         foodGenreRepo.save(Mexican);
 
         Hashtag hashtag1 = new Hashtag("Spicy","burns the tounge");
