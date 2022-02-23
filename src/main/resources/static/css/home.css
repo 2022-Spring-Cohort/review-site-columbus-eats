@@ -159,7 +159,8 @@ html{
     border: black solid;
     border-width: 1px;
     font-weight: bolder;
-    background-color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: black;
 }
 .hashtag{
     text-align: center;
@@ -170,6 +171,8 @@ html{
      display: flex;
      justify-content: space-around;
      padding: 5px;
+    }
 
-  
+.hashtagPop {
+color: white;
 }

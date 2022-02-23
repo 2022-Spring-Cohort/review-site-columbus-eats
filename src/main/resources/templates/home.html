@@ -53,7 +53,7 @@
                         <!-- use thyme leaf to generate hastags -->
                         <li th:each = "hashtag: ${Hashtags}"> #Spicy
                             <!-- fix a syntax -->
-                            <a  th:href = "'/hashtags/'+${hashtag.id}">
+                            <a  th:href = "'/hashtags/'+${hashtag.id}" class = "hashtagPop">
                                 
                                     <h3 th:text = "${hashtag.name}"></h3>
                                     <p th:text = "${hashtag.details}">Filler text blah blah blah</p>
