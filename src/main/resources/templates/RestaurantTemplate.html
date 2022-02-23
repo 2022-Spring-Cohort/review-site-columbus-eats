@@ -44,12 +44,14 @@
         <H1>Hashtags</H1>
         </div>
         <ul class="hashtagList">
-            <li th:each="restaurant:${restaurant.hashtags}"> #Spicy </li>
-            <li> #sweets </li>
-            <li> #dine-in </li>
-            <li> #Spicy </li>
-            <li> #Spicy </li>
-            <li> #Spicy </li>
+            <li th:each = "hashtag: ${Hashtags}">
+                <!-- fix a syntax -->
+                <a  th:href = "'/hashtags/'+${hashtag.id}">
+
+                    <h3 th:text = "${hashtag.name}"></h3>
+
+                </a>
+            </li>
         </ul>
     </section>
         </div>

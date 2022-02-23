@@ -3,22 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Genre Page</title>
-    <link rel="stylesheet" href="/static/css/genre.css">
+    <link rel="stylesheet" href="/css/genre.css">
 </head>
 <body>
     <div>
-        <h1 th:text="sdsdvmsfvkjdfv">Food Genre Tittle</h1>
-        <!-- need thyme leaf to chage diiferent genre title -->
+        <h1 th:text="${foodGenre.genre}">Food Genre Tittle</h1>
+        <!-- need thyme leaf to change different genre title -->
     </div>
 
     <section>
-        <!-- use thyme leaf to generate reasturant list -->
+
         <h1 >Restaurant List</h1>
         <ul>
-            <li>restaurant 1</li>
-            <li>restaurant 2</li>
-            <li>restaurant 3</li>
-            <li>restaurant 4</li>
+            <li th:each="restaurant:${foodGenre.restaurants}">
+                <!-- fix a syntax -->
+                <a  th:href = "'/restaurants/'+${restaurant.id}">
+
+                    <h3 th:text="${restaurant.name}"></h3>
+
+                </a>
+            </li>
         </ul>
     </section>
 </body>
