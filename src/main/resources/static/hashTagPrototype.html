@@ -16,11 +16,16 @@
         </ul>
     </nav>
     <section>
-        <h1 class="heading">Spicy</h1>
-        <ul>
-            <li th:each="restaurant:${hashtag.restaurants }" th:text="${restaurant.name}">restaurant 1</li>
-
+        <h1 class="heading">Spicy Restaurant</h1>
+        <ul class = "threeColumns"> 
+            <li>restaurant1</li>
+            <li>restaurant2</li>
+            <li>restaurant3</li>
+            <li>restaurant4</li>
         </ul>
+        <div id = "pic">
+            <img src ="/images/cajun.png"> 
+            </div>
     </section>
 </body>
 </html>

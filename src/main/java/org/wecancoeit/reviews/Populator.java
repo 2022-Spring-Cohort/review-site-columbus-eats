@@ -51,8 +51,8 @@ public class Populator implements CommandLineRunner {
 
         Restaurant restaurants1 = new Restaurant("the Cajun", seafood, "Taste the south with authentic low country boil style cooking", "url.com","imgLing", hashtag);
         Restaurant restaurants2 = new Restaurant("red lobster", seafood, "mmmmmm biscuits", "url.com","imgLing", hashtag1);
-        Restaurant restaurants3 = new Restaurant("Lalibela", Africanfood, "Lamb", "url.com","imgLing",hashtag4);
-        Restaurant restaurants4 = new Restaurant("HabeshaGarden", Africanfood, "goatmeat", "url.com","imgLing",hashtag3);
+        Restaurant restaurants3 = new Restaurant("Lalibela Ethiopian Restaurant", Africanfood, "Lamb", "https://lalibelarestaurant.net/","img/Lalibela.png/",hashtag4);
+        Restaurant restaurants4 = new Restaurant("Hoyo's Kitchen", Africanfood, "goatmeat", "http://hoyoskitchen.com/","img/Somali Restaurant.jpg",hashtag3);
         Restaurant restaurants5 = new Restaurant("Lan Viet", Asian, "Filler Filler Filler", "https://lanvietmarket.com/","img/lanviet.jpg/",hashtag4);
         Restaurant restaurants6 = new Restaurant("Gogi Korean BBQ", Asian, "Filler Filler Filler", "https://gogikbbq.com/","img/Gogi.png/",hashtag,hashtag1,hashtag3);
         Restaurant restaurants7 = new Restaurant("Local Cantina", Mexican, "Filler Filler Filler", "https://localcantina.com/","img/local-cantina-logo.png/",hashtag1);

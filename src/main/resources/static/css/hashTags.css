@@ -37,3 +37,13 @@
     box-sizing: border-box;
     padding-left: 20px;
 }
+
+.threeColumns{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+}
+
+.threeColumns li{
+    margin: 50px;
+}
