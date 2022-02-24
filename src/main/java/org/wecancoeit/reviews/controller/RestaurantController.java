@@ -3,6 +3,7 @@ package org.wecancoeit.reviews.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.wecancoeit.reviews.entities.FoodGenre;
 import org.wecancoeit.reviews.entities.Restaurant;
 import org.wecancoeit.reviews.entities.Review;
 import org.wecancoeit.reviews.repo.FoodGenreRepo;
@@ -55,6 +56,17 @@ public class RestaurantController {
         }
         return "RestaurantTemplate";
     }
+    @GetMapping("/genre/{id}")
+    public String showGenrePages(Model model, @PathVariable long id){
+         model.addAttribute("foodGenre",foodGenreRepo.findById(id).get());
+
+
+
+        return "genrePage";
+    }
+
+
+
 @PostMapping("/restaurants/{id}")
     public String addReview(@PathVariable long id, @RequestParam String review, @RequestParam int starRating, @RequestParam String userName ){
         Restaurant restaurant = restaurantRepo.findById(id).get();

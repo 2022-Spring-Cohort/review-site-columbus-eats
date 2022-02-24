@@ -101,7 +101,7 @@ html{
 .box{
   display: flex;
   flex-direction: column;
-  width: 350;
+  width: 350px;
   height: 450px;
   border: 1px solid black;
   margin: 10px;
@@ -109,7 +109,7 @@ html{
   text-align: justify;
   padding: 10px;
   border-radius: 15px;
-  background:linear-gradient(to top, red 50%, white 50%);
+  background:linear-gradient(to top, black 50%, white 50%);
   background-size: 100% 200%;
   transition: all .8s;
 
@@ -159,7 +159,8 @@ html{
     border: black solid;
     border-width: 1px;
     font-weight: bolder;
-    background-color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: black;
 }
 .hashtag{
     text-align: center;
@@ -170,6 +171,8 @@ html{
      display: flex;
      justify-content: space-around;
      padding: 5px;
+    }
 
-  
+.hashtagPop {
+color: white;
 }
