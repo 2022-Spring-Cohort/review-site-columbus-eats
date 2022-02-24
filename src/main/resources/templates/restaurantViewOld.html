@@ -6,24 +6,40 @@
     <link rel="stylesheet" href="/css/genre.css">
 </head>
 <body>
-    <div>
-        <h1 th:text="${foodGenre.genre}">Food Genre Tittle</h1>
+<nav class="navbar">
+
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#genre">Food Genre</a></li>
+        <li><a href="#hashtags">HashTags</a></li>
+
+
+    </ul>
+</nav>
+    <div class="title">
+        <h1 th:text="${foodGenre.genre}">Food Genre Title</h1>
         <!-- need thyme leaf to change different genre title -->
     </div>
 
-    <section>
+    <section class="restaurantList">
 
-        <h1 >Restaurant List</h1>
+
+        <h1> Restaurant List </h1>
+
         <ul>
+
             <li th:each="restaurant:${foodGenre.restaurants}">
                 <!-- fix a syntax -->
-                <a  th:href = "'/restaurants/'+${restaurant.id}">
+                <a class="restlink" th:href = "'/restaurants/'+${restaurant.id}">
 
                     <h3 th:text="${restaurant.name}"></h3>
 
                 </a>
             </li>
+
         </ul>
+
     </section>
 </body>
 </html>

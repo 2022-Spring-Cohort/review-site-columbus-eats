@@ -32,7 +32,57 @@
     border-bottom: 2px solid yellow;
 }
 
-.box p{
-    background-color: none;
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    
+}
+.restaurantList{
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    color: white;
+    padding: 30px;
+    flex-direction: column;
+    
+
+}
+body{
+    background-color: rgba(0, 0, 0, 0.5);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(/img/genre5.jpg) no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .8;
+    
+}
+body::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+     height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .8;
+
+}
+.restlink{
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    color: white;
+
 
 }
