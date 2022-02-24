@@ -32,7 +32,7 @@
         <div class="menu">
 
             <div class="symb">
-                <a th:href="${restaurant.url}"target= "_blank"><img class="logo" th:src="${restaurant.img}"></a>
+                <a th:href="${restaurant.url}"target= "_blank"><img class="logo" th:src="'/'+${restaurant.img}"></a>
             </div>
         </div>
 
@@ -71,9 +71,10 @@
     <label for="starRating">Star Rating:</label><br>
   <input type="number" min ="0" max="5" id="starRating" name="starRating" value=""><br>
   <label for="review">Review:</label><br>
-      <input type="text" id="userName" name="userName" value=""><br>
+      <input type="text" id="review" name="review" value=""><br>
       <label for="userName">Name:</label><br>
-  <input type="text" id="review" name="review" value="">
+      <input type="text" id="userName" name="userName" value=""><br>
+
 
     <button type="submit"> Submit a review</button>
 </div>
