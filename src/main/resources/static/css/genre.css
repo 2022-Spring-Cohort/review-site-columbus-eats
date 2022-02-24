@@ -50,6 +50,7 @@
     justify-content: left;
     color: white;
     padding: 30px;
+    flex-direction: column;
     
 
 }
@@ -60,7 +61,7 @@ body{
     top: 0;
     left: 0;
     background: url(/img/genre5.jpg) no-repeat center center/cover;
-    height: 1450px;
+    height: 100%;
     width: 100%;
     z-index: -1;
     opacity: .8;
@@ -71,8 +72,17 @@ body::before{
     position: absolute;
     top: 0;
     left: 0;
-     height: 1450px;
+     height: 100%;
     width: 100%;
     z-index: -1;
     opacity: .8;
+
+}
+.restlink{
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    color: white;
+
+
 }
