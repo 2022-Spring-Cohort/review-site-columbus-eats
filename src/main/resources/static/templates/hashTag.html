@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <link rel="stylesheet" href="css/hashTags.css">
+
+    <meta charset="UTF-8">
+    <title>Hashtag</title>
+</head>
+<body>
+    <nav class="navbar">
+    
+
+        <ul>
+            <li><a href="/#home">Home</a></li>
+    
+            <li><a href="/#genre">Food Genre</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h1 th:txt="${hashtag.name}"  class="heading">y</h1>
+        <ul>
+<!--            <li th:each="restaurant:${hashtag.restaurants }" th:text="${restaurant.name}">restaurant 1</li>-->
+            <li th:each="restaurant:${hashtag.restaurants }">
+                <!-- fix a syntax -->
+                <a  th:href = "'/restaurants/'+${restaurant.id}">
+
+                    <h3 th:text="${restaurant.name}"></h3>
+
+                </a>
+            </li>
+
+        </ul>
+    </section>
+</body>
+</html>
