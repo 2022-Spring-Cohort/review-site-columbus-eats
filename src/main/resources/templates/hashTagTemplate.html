@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en"xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="/css/hashTags.css">
+    <meta charset="UTF-8">
+    <title>Hashtag</title>
+</head>
+<body>
+    <nav class="navbar">
+
+        <section id="home">
+
+            </section>
+
+        <ul>
+            <li><a href="/#home">Home</a></li>
+    
+            <li><a href="/#genre">Food Genre</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h1 class="heading" th:text="${hashtag.name}">Spicy Restaurant</h1>
+        <ul class = "cards">
+            <li th:each="restaurant:${hashtag.restaurants}">
+                <div class = "card">
+                    <a th:href="'/restaurants/'+${restaurant.id}">
+                        <img th:src="${restaurant.img}" alt="">
+                        <h2 th:text="${restaurant.name}">RESTAURANT NAME</h2>
+                    </a>
+                </div>
+            </li>
+        </ul>
+        <!-- <div class = "pic">
+            
+            <img src="/img/lanviet.jpg" alt=""> 
+            <img src="/img/Gogi.png"alt ="">
+            </div> -->
+    </section>
+</body>
+</html>
