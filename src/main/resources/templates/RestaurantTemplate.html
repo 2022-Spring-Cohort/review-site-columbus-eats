@@ -7,83 +7,81 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"> </script>
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="/css/restaurant.css">
     <title>Document</title>
 </head>
 <body>
 
-    <nav class="navbar">
+<nav class="navbar">
 
 
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="/foodGenre.html">Food Genre</a></li>
-            <li><a href="/hashTags.html">HashTags</a></li>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="/foodGenre.html">Food Genre</a></li>
+        <li><a href="/hashTags.html">HashTags</a></li>
 
 
-        </ul>
-    </nav>
+    </ul>
+</nav>
 
-    <section class="restaurant">
+<section class="restaurant">
 
 
-        <div class="menu">
+    <div class="menu">
 
-            <div class="symb">
-                <a th:href="${restaurant.url}"target= "_blank"><img class="logo" th:src="'/'+${restaurant.img}"></a>
-            </div>
+        <div class="symb">
+            <a th:href="${restaurant.url}" target="_blank"><img class="logo" th:src="'/'+${restaurant.img}"></a>
         </div>
+    </div>
 
 
-
-    </section>
-    <section>
-        <div class="hashtag">
+</section>
+<section>
+    <div class="hashtag">
         <H1>Hashtags</H1>
-        </div>
-        <ul class="hashtagList">
-            <li th:each = "hashtag: ${restaurant.hashtags}">
-                <!-- fix a syntax -->
-                <a  th:href = "'/hashtags/'+${hashtag.id}">
+    </div>
+    <ul class="hashtagList">
+        <li th:each="hashtag: ${restaurant.hashtags}">
+            <!-- fix a syntax -->
+            <a th:href="'/hashtags/'+${hashtag.id}">
 
-                    <h3 class="hashtagLink" th:text = "${hashtag.name}"></h3>
+                <h3 class="hashtagLink" th:text="${hashtag.name}"></h3>
 
-                </a>
-            </li>
-        </ul>
-    </section>
-        </div>
+            </a>
+        </li>
+    </ul>
+</section>
+</div>
 
-        <div class="t-heading">
+<div class="t-heading">
 
-            <h1>What fans are saying</h1>
-        </div>
+    <h1>What fans are saying</h1>
+</div>
 
 <!-- TODO: Write this method :)-->
 <form class="form" th:action="'/restaurants/'+${restaurant.id}" method="post">
-  <div class="reviewTitle">
-    <h2>Reviews</h2>
-  </div>
-  <div class="foodReview">
+    <div class="reviewTitle">
+        <h2>Reviews</h2>
+    </div>
+    <div class="foodReview">
 
-    <label for="starRating">Star Rating:</label><br>
-  <input type="number" min ="0" max="5" id="starRating" name="starRating" value=""><br>
-  <label for="review">Review:</label><br>
-      <input type="text" id="review" name="review" value="" size="80" height="10"><br>
-      <label for="userName">Name:</label><br>
-      <input type="text" id="userName" name="userName" value=""><br>
+        <label for="starRating">Star Rating:</label><br>
+        <input type="number" min="0" max="5" id="starRating" name="starRating" value=""><br>
+        <label for="userName">Name:</label><br>
+        <input type="text" id="userName" name="userName" value=""><br>
+        <label for="review">Review:</label><br>
+        <input type="text" id="review" name="review" value="" size="40" height="400"><br>
 
-
-    <button type="submit"> Submit a review</button>
-</div>
+        <button type="submit"> Submit a review</button>
+    </div>
 </form>
 
 <section id="testimonials">
 
 
-    <div class="container" th:each = "myReview: ${restaurant.reviews}">
+    <div class="container" th:each="myReview: ${restaurant.reviews}">
         <!-- ask about how to restrict it by restaurant -->
 
         <div class="box-wrapper">
@@ -95,25 +93,26 @@
                         <img src="/img/profilePic.jpg" alt="">
                     </div>
                     <div class="user">
-                        <strong th:text = "${myReview.name}">Arjin Harris</strong>
-                        <span th:text = "${myReview.userName}">@arjinh</span>
+                        <strong th:text="${myReview.name}">Arjin Harris</strong>
+                        <span th:text="${myReview.userName}">@arjinh</span>
                     </div>
                 </div>
-                <div class="review" >
+                <div class="review">
 
-                    <i th:each="count : ${#numbers.sequence(0, 4)}" th:class="${count < myReview.rating} ?'fas fa-star':'far fa-star'"></i>
+                    <i th:each="count : ${#numbers.sequence(0, 4)}"
+                       th:class="${count < myReview.rating} ?'fas fa-star':'far fa-star'"></i>
 
                 </div>
             </div>
 
             <div class="comments">
-                <p th:text = "${myReview.comments}">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita in recusandae modi atque aliquid explicabo
-                    incidunt provident ipsa! Laudantium, mollitia! Nemo, fugiat impedit fuga pariatur rem aliquid esse! Tenetur, itaque.</p>
+                <p th:text="${myReview.comments}">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita in
+                    recusandae modi atque aliquid explicabo
+                    incidunt provident ipsa! Laudantium, mollitia! Nemo, fugiat impedit fuga pariatur rem aliquid esse!
+                    Tenetur, itaque.</p>
             </div>
         </div>
     </div>
-
-
 
 
 </section>
