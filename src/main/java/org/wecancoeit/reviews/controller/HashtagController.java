@@ -26,6 +26,6 @@ public class HashtagController {
     public String showHome(Model model, @PathVariable Long id) {
         model.addAttribute("hashtag", hashtagRepo.findById(id).get());
 //        model.addAttribute("restaurant", restaurantRepo.findById(id).get());
-        return "hashTag";
+        return "hashTagTemplate";
     }
 }
