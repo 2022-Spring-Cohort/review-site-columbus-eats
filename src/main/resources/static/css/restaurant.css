@@ -157,7 +157,7 @@ ul{
     gap: 15px;
     list-style: none;
 }
-.seaFoodReview{
+.foodReview{
     display: flex;
     justify-content: center;
     align-items: center;

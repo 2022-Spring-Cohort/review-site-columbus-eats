@@ -23,7 +23,7 @@
         <ul class = "cards">
             <li th:each="restaurant:${restaurants}">
                 <div class = "card">
-                    <a th:href="'/restaurants/'+${restaurant.id}">
+                    <a class = "restlink" th:href="'/restaurants/'+${restaurant.id}">
                         <img th:src="'/'+${restaurant.img}" alt="">
                         <h2 th:text="${restaurant.name}">RESTAURANT NAME</h2>
                     </a>
