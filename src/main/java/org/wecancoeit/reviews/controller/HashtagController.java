@@ -24,8 +24,8 @@ public class HashtagController {
 
     @RequestMapping("/hashtags/{id}")
     public String showHome(Model model, @PathVariable Long id) {
-        model.addAttribute("hashtag", hashtagRepo.findById(id).get());
-//        model.addAttribute("restaurant", restaurantRepo.findById(id).get());
-        return "hashTagTemplate";
+        model.addAttribute("restaurants", hashtagRepo.findById(id).get().getRestaurants());
+        model.addAttribute("title", hashtagRepo.findById(id).get().getName());
+        return "restaurantView";
     }
 }

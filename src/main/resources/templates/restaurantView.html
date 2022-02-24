@@ -19,12 +19,12 @@
         </ul>
     </nav>
     <section>
-        <h1 class="heading" th:text="${hashtag.name}">Spicy Restaurant</h1>
+        <h1 class="heading" th:text="${title}">Spicy Restaurant</h1>
         <ul class = "cards">
-            <li th:each="restaurant:${hashtag.restaurants}">
+            <li th:each="restaurant:${restaurants}">
                 <div class = "card">
                     <a th:href="'/restaurants/'+${restaurant.id}">
-                        <img th:src="${restaurant.img}" alt="">
+                        <img th:src="'/'+${restaurant.img}" alt="">
                         <h2 th:text="${restaurant.name}">RESTAURANT NAME</h2>
                     </a>
                 </div>

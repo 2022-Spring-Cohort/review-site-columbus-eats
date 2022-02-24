@@ -58,11 +58,12 @@ public class RestaurantController {
     }
     @GetMapping("/genre/{id}")
     public String showGenrePages(Model model, @PathVariable long id){
-         model.addAttribute("foodGenre",foodGenreRepo.findById(id).get());
+         model.addAttribute("restaurants",foodGenreRepo.findById(id).get().getRestaurants());
+         model.addAttribute("title",foodGenreRepo.findById(id).get().getGenre());
 
 
 
-        return "genrePage";
+        return "restaurantView";
     }
 
 
