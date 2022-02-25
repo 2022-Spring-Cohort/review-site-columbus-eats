@@ -41,7 +41,7 @@ html{
 #home{
     display: flex;
     flex-direction: column;
-    height: 1450px;
+    height: 1300px;
     justify-content: center;
     align-items: center;
     left: 10%;
@@ -97,9 +97,13 @@ html{
     justify-content: space-around;
     flex-wrap: wrap;
     box-sizing: border-box;
+    background: url(/img/newgenre.jpg) no-repeat center ;
+        height: 100%;
+        width: 100%;
 }
 .box{
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   width: 350px;
   height: 450px;
@@ -139,8 +143,10 @@ html{
     text-align: center;
     font-weight: bold;
     font-size: 60px;
-    color: rgb(10, 1, 1);
-
+    color: white;
+    background: url(/img/newgenre.jpg) no-repeat center ;
+            height: 100%;
+            width: 100%;
     
 }
 .hashtags{
@@ -176,4 +182,7 @@ html{
 
 .hashtagPop {
 color: white;
+}
+.box p {
+font-size: 1.3em;
 }

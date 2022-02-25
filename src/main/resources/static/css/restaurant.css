@@ -175,5 +175,22 @@ ul{
 }
 
 .hashtagLink{
-color: white;}
+color: white;
+}
 
+.symb img{
+width: 700px;
+
+}
+body{
+    background-color: rgba(0, 0, 0, 0.5);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(/img/newgenre.jpg) no-repeat center ;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .8;
+    }
