@@ -54,10 +54,10 @@ public class Populator implements CommandLineRunner {
         Restaurant restaurants2 = new Restaurant("red lobster", seafood, "mmmmmm biscuits", "https://www.redlobster.com/","img/redLobster.png", hashtag1);
         Restaurant restaurants3 = new Restaurant("Lalibela Ethiopian Restaurant", Africanfood, "Lamb", "https://lalibelarestaurant.net/","img/africanPic2.png/",hashtag4);
         Restaurant restaurants4 = new Restaurant("Hoyo's Kitchen", Africanfood, "goatmeat", "http://hoyoskitchen.com/","img/Somali Restaurant.jpg",hashtag3);
-        Restaurant restaurants5 = new Restaurant("Lan Viet", Asian, "Filler Filler Filler", "https://lanvietmarket.com/","img/lanviet.jpg/",hashtag4);
+        Restaurant restaurants5 = new Restaurant("Lan Viet", Asian, "Filler Filler Filler", "https://lanvietmarket.com/","img/lanviet.jpg/",hashtag4, hashtag1);
         Restaurant restaurants6 = new Restaurant("Gogi Korean BBQ", Asian, "Filler Filler Filler", "https://gogikbbq.com/","img/Gogi.png/",hashtag,hashtag1,hashtag3);
-        Restaurant restaurants7 = new Restaurant("Local Cantina", Mexican, "Filler Filler Filler", "https://localcantina.com/","img/local-cantina-logo.png/",hashtag1);
-        Restaurant restaurants8 = new Restaurant("El Vaquero", Mexican, "Filler Filler Filler", "https://www.mexicanrestauranthilliard.com/","img/elVaquero.jpg/",hashtag5);
+        Restaurant restaurants7 = new Restaurant("Local Cantina", Mexican, "Filler Filler Filler", "https://localcantina.com/","img/local-cantina-logo.png/",hashtag1,hashtag3);
+        Restaurant restaurants8 = new Restaurant("El Vaquero", Mexican, "Filler Filler Filler", "https://www.mexicanrestauranthilliard.com/","img/elVaquero.jpg/",hashtag5,hashtag3);
 
 
         restaurantRepo.save(restaurants1);
@@ -69,10 +69,13 @@ public class Populator implements CommandLineRunner {
         restaurantRepo.save(restaurants7);
         restaurantRepo.save(restaurants8);
 
-        Review review1 = new Review("Arjin Harris", "arjinh", "best food ever", 5, "/img/logo.png", restaurants1);
-        Review review2 = new Review("Kevin Ha", "crayonEater", "it was good food but not as good as the red crayon", 4, "/img/logo.png", restaurants2);
+        Review review1 = new Review("Arjin Harris", "arjinh", "Best food ever", 5, "/img/logo.png", restaurants1);
+        Review review2 = new Review("Kevin Ha", "crayonEater", "It was good food but not as good as the red crayon", 4, "/img/logo.png", restaurants2);
+
+
         reviewRepo.save(review2);
         reviewRepo.save(review1);
+
         restaurants1.addReview(review1);
         restaurants1.addReview(review2);
         restaurants2.addReview(review1);
