@@ -177,7 +177,8 @@ color: white;
 }
 
 .symb img{
-width: 700px;
+width: auto;
+height: 450px;
 
 }
 body{

@@ -50,14 +50,14 @@ public class Populator implements CommandLineRunner {
         hashtagRepo.save(hashtag5);
 
 
-        Restaurant restaurants1 = new Restaurant("The Cajun", seafood, "Taste the south with authentic low country boil style cooking", "https://www.cajunboilbar.com/","img/cajunboil.png", hashtag4,hashtag1);
-        Restaurant restaurants2 = new Restaurant("Red Lobster", seafood, "", "https://www.redlobster.com/","img/redLobster.png", hashtag1,hashtag4);
+        Restaurant restaurants1 = new Restaurant("The Cajun", seafood, "Taste the south with authentic low country boil style cooking", "https://www.cajunboilbar.com/","img/cajunboil.png", hashtag4,hashtag1,hashtag3);
+        Restaurant restaurants2 = new Restaurant("Red Lobster", seafood, "", "https://www.redlobster.com/","img/redLobster.png", hashtag1,hashtag4,hashtag2, hashtag3);
         Restaurant restaurants3 = new Restaurant("Lalibela Ethiopian Restaurant", Africanfood, "-are served a vast array of foods, ranging from multicolored mounds of spicy stews to vegetable curries to cubes of raw ", "https://lalibelarestaurant.net/","img/africanPic2.png/",hashtag2,hashtag5,hashtag4);
         Restaurant restaurants4 = new Restaurant("Hoyo's Kitchen", Africanfood, "", "http://hoyoskitchen.com/","img/Somali Restaurant.jpg",hashtag1,hashtag5,hashtag);
-        Restaurant restaurants5 = new Restaurant("Lan Viet", Asian, "", "https://lanvietmarket.com/","img/lanviet.jpg/",hashtag5, hashtag1);
-        Restaurant restaurants6 = new Restaurant("Gogi Korean BBQ", Asian, "", "https://gogikbbq.com/","img/Gogi.png/",hashtag5,hashtag1,hashtag3);
+        Restaurant restaurants5 = new Restaurant("Lan Viet", Asian, "", "https://lanvietmarket.com/","img/lanviet.jpg/",hashtag5, hashtag1, hashtag2);
+        Restaurant restaurants6 = new Restaurant("Gogi Korean BBQ", Asian, "", "https://gogikbbq.com/","img/Gogi.png/",hashtag5,hashtag1,hashtag3,hashtag2);
         Restaurant restaurants7 = new Restaurant("Local Cantina", Mexican, "", "https://localcantina.com/","img/local-cantina-logo.png/",hashtag1,hashtag,hashtag5);
-        Restaurant restaurants8 = new Restaurant("El Vaquero", Mexican, "", "https://www.mexicanrestauranthilliard.com/","img/elVaquero.jpg/",hashtag5,hashtag1);
+        Restaurant restaurants8 = new Restaurant("El Vaquero", Mexican, "", "https://www.mexicanrestauranthilliard.com/","img/elVaquero.jpg/",hashtag5,hashtag1,hashtag4);
 
 
         restaurantRepo.save(restaurants1);
