@@ -73,10 +73,10 @@ public class Populator implements CommandLineRunner {
         Review review2 = new Review("Kevin Ha", "crayonEater", "It was good food but not as good as the red crayon", 4, "/img/logo.png", restaurants2);
         Review review3 = new Review("Peggy Hill","theHillDog","I really Like asian food but gogi is next level although it is a little expensive",4,"/img/logo.png",restaurants6);
         Review review4 = new Review("James bond","007","They gave me a martini shakened, not stirred", 4,"/img/logo.png",restaurants4);
-        Review review5 = new Review("Arjin Harris", "arjinh", "best food ever", 5, "/img/logo.png", restaurants1);
-        Review review6 = new Review("Kevin Ha", "crayonEater", "mmmmmmmmm biscuits, but not as good as the red crayon", 3, "/img/logo.png", restaurants2);
-        Review review7 = new Review("Peggy Hill","theHillDog","I really Like asian food but gogi is next level although it is a little expensive",4,"/img/logo.png",restaurants6);
-        Review review8 = new Review("James bond","007","They gave me a martini shakened, not stirred", 4,"/img/logo.png",restaurants4);
+        Review review5 = new Review("Arjin Harris", "arjinh", "best food ever", 5, "/img/logo.png", restaurants3);
+        Review review6 = new Review("Kevin Ha", "crayonEater", "mmmmmmmmm biscuits, but not as good as the red crayon", 3, "/img/logo.png", restaurants5);
+        Review review7 = new Review("Peggy Hill","theHillDog","I really Like asian food but gogi is next level although it is a little expensive",4,"/img/logo.png",restaurants7);
+        Review review8 = new Review("James bond","007","They gave me a martini shakened, not stirred", 4,"/img/logo.png",restaurants8);
 
         reviewRepo.save(review4);
         reviewRepo.save(review2);

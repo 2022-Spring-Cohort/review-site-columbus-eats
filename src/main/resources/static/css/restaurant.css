@@ -129,9 +129,7 @@ transition: all ease 0.3s;
     border-bottom: 2px solid yellow;
 }
 
-body{
-    background-color: rgba(50, 50, 50 );
-}
+
 
 .menu{
     display: flex;
@@ -183,7 +181,7 @@ width: 700px;
 
 }
 body{
-    background-color: rgba(0, 0, 0, 0.5);
+
     content: "";
     position: absolute;
     top: 0;
